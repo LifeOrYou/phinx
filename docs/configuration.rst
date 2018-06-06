@@ -247,6 +247,7 @@ Phinx currently supports the following database adapters natively:
 * `PostgreSQL <http://www.postgresql.org/>`_: specify the ``pgsql`` adapter.
 * `SQLite <http://www.sqlite.org/>`_: specify the ``sqlite`` adapter.
 * `SQL Server <http://www.microsoft.com/sqlserver>`_: specify the ``sqlsrv`` adapter.
+* `Firebird <http://www.firebirdsql.org>`_: specify the ``firebird`` adapter.
 
 SQLite
 `````````````````
@@ -270,6 +271,10 @@ When using the ``sqlsrv`` adapter and connecting to a named instance you should
 omit the ``port`` setting as SQL Server will negotiate the port automatically.
 Additionally, omit the ``charset: utf8`` or change to ``charset: 65001`` which
 corresponds to UTF8 for SQL Server.
+
+Firebird
+`````````````````
+
 
 Custom Adapters
 `````````````````
@@ -303,7 +308,7 @@ The aliased classes will still be required to implement the ``Phinx\Migration\Cr
 Version Order
 ------
 
-When rolling back or printing the status of migrations, Phinx orders the executed migrations according to the 
+When rolling back or printing the status of migrations, Phinx orders the executed migrations according to the
 ``version_order`` option, which can have the following values:
 
 * ``creation`` (the default): migrations are ordered by their creation time, which is also part of their filename.

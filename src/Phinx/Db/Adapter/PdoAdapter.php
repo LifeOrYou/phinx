@@ -151,6 +151,7 @@ abstract class PdoAdapter extends AbstractAdapter
     public function fetchRow($sql)
     {
         $result = $this->query($sql);
+        //if ($result === false) var_dump($this->getConnection()->errorInfo());
 
         return $result->fetch();
     }
@@ -381,6 +382,6 @@ abstract class PdoAdapter extends AbstractAdapter
      */
     public function castToBool($value)
     {
-        return (bool)$value ? 1 : 0;
+        return (bool)$value ? 'TRUE' : 'FALSE';
     }
 }

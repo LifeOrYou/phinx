@@ -62,7 +62,7 @@ Great, so you want to contribute. Let's get started:
 
 ## Getting Started with docker
 
-If you do not wish to install MySQL and Postgres locally to run unit tests
+If you do not wish to install MySQL, Postgres and Firebird locally to run unit tests
 can use [docker-compose](https://docs.docker.com/compose/) which will start
 both database, install all development dependencies and run all unit tests.
 
